@@ -1,0 +1,238 @@
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.primerproyecto.InicioFragment"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_brazosFragment"
+            app:destination="@id/brazosFragment"/>
+        <action
+            android:id="@+id/action_inicioFragment_to_espaldaFragment"
+            app:destination="@id/espaldaFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_cardioFragment"
+            app:destination="@id/cardioFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_abdominalesFragment"
+            app:destination="@id/abdominalesFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_piernasFragment"
+            app:destination="@id/piernasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/brazosFragment"
+        android:name="com.example.primerproyecto.BrazosFragment"
+        tools:layout="@layout/fragment_brazos" />
+    <action
+        android:id="@+id/action_brazosFragment_to_curlDeBicepsFragment"
+        app:destination="@id/CurlBicepsFragment" />
+    <action
+        android:id="@+id/action_brazosFragment_to_tricepsPoleaFragment"
+        app:destination="@id/TricepsPoleaFragment" />
+    <action
+        android:id="@+id/action_brazosFragment_to_pressMilitarFragment"
+        app:destination="@id/PressMilitarFragment" />
+    <action
+        android:id="@+id/action_brazosFragment_to_fondosParalelasFragment"
+        app:destination="@id/FondoParalelasFragment" />
+    <action
+        android:id="@+id/action_brazosFragment_to_curlMartilloFragment"
+        app:destination="@id/CurlMartilloFragment" />
+    <action
+        android:id="@+id/action_brazosFragment_to_pressMancuernasFragment"
+        app:destination="@id/PressMancuernasFragment" />
+
+    <fragment
+        android:id="@+id/espaldaFragment"
+        android:name="com.example.primerproyecto.EspaldaFragment"
+        tools:layout="@layout/fragment_espalda" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_pullUpFragment"
+        app:destination="@id/PullUpFragment" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_deadLiftFragment"
+        app:destination="@id/DeadLiftFragment" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_remoBarraFragment"
+        app:destination="@id/RemoBarraFragment" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_jalonPechoFragment"
+        app:destination="@id/JalonPechoFragment" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_pullDownFragment"
+        app:destination="@id/PullDownFragment" />
+    <action
+        android:id="@+id/action_espaldaFragment_to_remoPoleaFragment"
+        app:destination="@id/RemoPoleaFragment" />
+
+    <action
+        android:id="@+id/action_piernasFragment_to_sentadillasFragment"
+        app:destination="@id/sentadillasFragment" />
+
+    <fragment
+        android:id="@+id/cardioFragment"
+        android:name="com.example.primerproyecto.CardioFragment"
+        tools:layout="@layout/fragment_cardio" />
+    <action
+        android:id="@+id/action_cardioFragment_to_burpeesFragment"
+        app:destination="@id/BurpeesFragment" />
+    <action
+        android:id="@+id/action_cardioFragment_to_junpingJackFragment"
+        app:destination="@id/JunpingJackFragment" />
+    <action
+        android:id="@+id/action_cardioFragment_to_mountainClimbersFragment"
+        app:destination="@id/MountainClimbersFragment" />
+    <action
+        android:id="@+id/action_cardioFragment_to_skippingFragment"
+        app:destination="@id/SkippingFragment" />
+    <action
+        android:id="@+id/action_cardioFragment_to_pullDown1Fragment"
+        app:destination="@id/PullDownsFragment" />
+    <action
+        android:id="@+id/action_cardioFragment_to_correrFragment"
+        app:destination="@id/CorrerFragment" />
+
+
+
+    <fragment
+        android:id="@+id/abdominalesFragment"
+        android:name="com.example.primerproyecto.AbdominalesFragment"
+        tools:layout="@layout/fragment_abdominales" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_crunchesFragment"
+        app:destination="@id/CrunchesFragment" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_plankFragment"
+        app:destination="@id/PlankFragment" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_bicyclesCrunchesFragment"
+        app:destination="@id/BicycleCrunchesFragment" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_legRaisesFragment"
+        app:destination="@id/LegRaisesFragment" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_russianTwistsFragment"
+        app:destination="@id/RussianTwistsFragment" />
+    <action
+        android:id="@+id/action_abdominalesFragment_to_mountainClimbers1Fragment"
+        app:destination="@id/MountainClimbers1Fragment" />
+
+    <fragment
+        android:id="@+id/piernasFragment"
+        android:name="com.example.primerproyecto.PiernasFragment"
+        tools:layout="@layout/fragment_piernas" />
+
+    <fragment
+        android:id="@+id/sentadillasFragment"
+        android:name="com.example.primerproyecto.SentadillasFragment"
+        tools:layout="@layout/fragment_sentadillas" />
+    <fragment
+        android:id="@+id/CurlBicepsFragment"
+        android:name="com.example.primerproyecto.CurlBicepsFragment"
+        tools:layout="@layout/fragment_curl_biceps"/>
+    <fragment
+        android:id="@+id/TricepsPoleaFragment"
+        android:name="com.example.primerproyecto.TricepsPoleaFragment"
+        tools:layout="@layout/fragment_triceps_polea"/>
+    <fragment
+        android:id="@+id/PressMilitarFragment"
+        android:name="com.example.primerproyecto.PressMilitarFragment"
+        tools:layout="@layout/fragment_press_militar"/>
+    <fragment
+        android:id="@+id/FondoParalelasFragment"
+        android:name="com.example.primerproyecto.FondoParalelasFragment"
+        tools:layout="@layout/fragment_fondo_paralelas"/>
+    <fragment
+        android:id="@+id/CurlMartilloFragment"
+        android:name="com.example.primerproyecto.CurlMartilloFragment"
+        tools:layout="@layout/fragment_curl_martillo"/>
+    <fragment
+        android:id="@+id/PressMancuernasFragment"
+        android:name="com.example.primerproyecto.PressMancuernasFragment"
+        tools:layout="@layout/fragment_press_mancuernas"/>
+    <fragment
+        android:id="@+id/PullUpFragment"
+        android:name="com.example.primerproyecto.PullUpFragment"
+        tools:layout="@layout/fragment_pull_up"/>
+    <fragment
+        android:id="@+id/PullDownFragment"
+        android:name="com.example.primerproyecto.PullDownFragment"
+        tools:layout="@layout/fragment_pull_down"/>
+
+    <fragment
+        android:id="@+id/DeadLiftFragment"
+        android:name="com.example.primerproyecto.DeadliftFragment"
+        tools:layout="@layout/fragment_deadlift"/>
+    <fragment
+        android:id="@+id/RemoBarraFragment"
+        android:name="com.example.primerproyecto.RemoBarraFragment"
+        tools:layout="@layout/fragment_remo_barra"/>
+    <fragment
+        android:id="@+id/JalonPechoFragment"
+        android:name="com.example.primerproyecto.JalonPechoFragment"
+        tools:layout="@layout/fragment_jalon_pecho"/>
+    <fragment
+        android:id="@+id/PullDownsFragment"
+        android:name="com.example.primerproyecto.PullDownsFragment"
+        tools:layout="@layout/fragment_pull_down1"/>
+    <fragment
+        android:id="@+id/RemoPoleaFragment"
+        android:name="com.example.primerproyecto.RemoPoleaFragment"
+        tools:layout="@layout/fragment_remo_polea"/>
+    <fragment
+        android:id="@+id/BurpeesFragment"
+        android:name="com.example.primerproyecto.BurpeesFragment"
+        tools:layout="@layout/fragment_burpees"/>
+    <fragment
+        android:id="@+id/JunpingJackFragment"
+        android:name="com.example.primerproyecto.JunpingJackFragment"
+        tools:layout="@layout/fragment_junping_jack"/>
+    <fragment
+        android:id="@+id/MountainClimbersFragment"
+        android:name="com.example.primerproyecto.MountainClimbersFragment"
+        tools:layout="@layout/fragment_mountain_climbers"/>
+    <fragment
+        android:id="@+id/SkippingFragment"
+        android:name="com.example.primerproyecto.SkippingFragment"
+        tools:layout="@layout/fragment_pull_down1"/>
+    <fragment
+        android:id="@+id/CorrerFragment"
+        android:name="com.example.primerproyecto.CorrerFragment"
+        tools:layout="@layout/fragment_correr"/>
+    <fragment
+        android:id="@+id/CrunchesFragment"
+        android:name="com.example.primerproyecto.CrunchesFragment"
+        tools:layout="@layout/fragment_crunches"/>
+    <fragment
+        android:id="@+id/PlankFragment"
+        android:name="com.example.primerproyecto.PlankFragment"
+        tools:layout="@layout/fragment_plank"/>
+    <fragment
+        android:id="@+id/BicycleCrunchesFragment"
+        android:name="com.example.primerproyecto.BicycleCrunchesFragment"
+        tools:layout="@layout/fragment_bicycle_crunches"/>
+    <fragment
+        android:id="@+id/LegRaisesFragment"
+        android:name="com.example.primerproyecto.LegraisesFragment"
+        tools:layout="@layout/fragment_legraises"/>
+    <fragment
+        android:id="@+id/RussianTwistsFragment"
+        android:name="com.example.primerproyecto.RussianTwistsFragment"
+        tools:layout="@layout/fragment_russian_twists"/>
+    <fragment
+        android:id="@+id/MountainClimbers1Fragment"
+        android:name="com.example.primerproyecto.MountainClimbers1Fragment"
+        tools:layout="@layout/fragment_mountain_climbers1"/>
+
+
+
+
+
+</navigation>

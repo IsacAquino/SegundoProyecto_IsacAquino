@@ -1,0 +1,149 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardioFragment">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff6750a4"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Ejercicios para cardio"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Primera fila de imágenes -->
+
+    <!-- Segunda fila de imágenes -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="Ejercicio 1"
+        android:src="@drawable/burpees"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <!-- Tercera fila de imágenes -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="Ejercicio 2"
+        android:src="@drawable/jumpingjack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Ejercicio 3"
+        android:src="@drawable/mountainclimbers"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Ejercicio 4"
+        android:src="@drawable/skipping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView4"
+        app:layout_constraintTop_toBottomOf="@id/imageView3" />
+
+    <!-- Botones correspondientes a cada imagen -->
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Ejercicio 5"
+        android:src="@drawable/high_knees"
+        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="135dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Ejercicio 6"
+        android:src="@drawable/running"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView12"
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+    <Button
+        android:id="@+id/boton_uno"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Burpees"
+        app:layout_constraintEnd_toStartOf="@id/boton_dos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/boton_dos"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Jumping Jack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/boton_uno"
+        app:layout_constraintTop_toBottomOf="@id/imageView3" />
+
+    <Button
+        android:id="@+id/boton_tres"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Mountain Climbers"
+        app:layout_constraintEnd_toStartOf="@id/boton_cuatro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView4" />
+
+    <Button
+        android:id="@+id/boton_cuatro"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Skipping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/boton_tres"
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+    <Button
+        android:id="@+id/boton_cinco2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Pulldown"
+        app:layout_constraintEnd_toStartOf="@id/boton_seis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView12" />
+
+    <Button
+        android:id="@+id/boton_seis"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Correr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/boton_cinco2"
+        app:layout_constraintTop_toBottomOf="@id/imageView15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
