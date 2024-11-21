@@ -6,6 +6,16 @@
     app:startDestination="@id/inicioFragment">
 
     <fragment
+        android:id="@+id/instruccionesFragment"
+        android:name="com.example.primerproyecto.InstruccionesFragment"
+        android:label="Instrucciones">
+        <argument
+            android:name="instrucciones"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
         android:id="@+id/inicioFragment"
         android:name="com.example.primerproyecto.InicioFragment"
         tools:layout="@layout/fragment_inicio" >

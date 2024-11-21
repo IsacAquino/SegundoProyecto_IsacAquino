@@ -6,145 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".BrazosFragment">
 
-    <!-- Título con fondo de color -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ejercicios_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/ejercicios_list_item"
+        />
+
+    <!-- Título -->
     <TextView
         android:id="@+id/titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff6750a4"
+        android:background="#6200EE"
         android:gravity="center"
         android:padding="16dp"
         android:text="Ejercicios para brazos"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Primera fila de imágenes -->
-
-    <!-- Segunda fila de imágenes -->
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="72dp"
-        android:contentDescription="Ejercicio 1"
-        android:src="@drawable/biceps"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
-
-    <!-- Tercera fila de imágenes -->
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="72dp"
-        android:contentDescription="Ejercicio 2"
-        android:src="@drawable/triceps"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="Ejercicio 3"
-        android:src="@drawable/pressmilitar"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="Ejercicio 4"
-        android:src="@drawable/fondosparalelo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView4"
-        app:layout_constraintTop_toBottomOf="@id/imageView3" />
-
-    <!-- Botones correspondientes a cada imagen -->
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="Ejercicio 5"
-        android:src="@drawable/levantar"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView4" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="135dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="Ejercicio 6"
-        android:src="@drawable/mancuernas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView12"
-        app:layout_constraintTop_toBottomOf="@id/imageView5" />
-
-    <Button
-        android:id="@+id/boton_uno"
-        android:layout_width="150dp"
+    <!-- Primera fila de botones -->
+    <TextView
+        android:id="@+id/btn_curl_biceps"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Curl de Bíceps"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/boton_dos" />
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintEnd_toStartOf="@+id/btn_triceps_polea" />
 
-    <Button
-        android:id="@+id/boton_dos"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/btn_triceps_polea"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Tríceps en Polea"
-        app:layout_constraintTop_toBottomOf="@id/imageView3"
-        app:layout_constraintStart_toEndOf="@id/boton_uno"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/btn_curl_biceps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
 
-    <Button
-        android:id="@+id/boton_tres"
-        android:layout_width="150dp"
+    <!-- Segunda fila de botones -->
+    <TextView
+        android:id="@+id/btn_press_militar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Press Militar"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/boton_cuatro" />
+        app:layout_constraintTop_toBottomOf="@id/btn_curl_biceps"
+        app:layout_constraintEnd_toStartOf="@+id/btn_fondos_paralelas" />
 
-    <Button
-        android:id="@+id/boton_cuatro"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/btn_fondos_paralelas"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Fondos en Paralelas"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
-        app:layout_constraintStart_toEndOf="@id/boton_tres"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/btn_press_militar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_triceps_polea" />
 
-    <Button
-        android:id="@+id/boton_cinco2"
-        android:layout_width="150dp"
+    <!-- Tercera fila de botones -->
+    <TextView
+        android:id="@+id/btn_curl_martillo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Curl Martillo"
-        app:layout_constraintEnd_toStartOf="@id/boton_seis"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView12" />
+        app:layout_constraintTop_toBottomOf="@id/btn_press_militar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_press_mancuernas" />
 
-    <Button
-        android:id="@+id/boton_seis"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/btn_press_mancuernas"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="Press con Mancuernas"
-        app:layout_constraintTop_toBottomOf="@id/imageView15"
-        app:layout_constraintStart_toEndOf="@id/boton_cinco2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/btn_curl_martillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_fondos_paralelas" />
 </androidx.constraintlayout.widget.ConstraintLayout>
