@@ -36,18 +36,15 @@ class BrazosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Configura el RecyclerView
         ejerciciosList = view.findViewById(R.id.ejercicios_list)
         ejerciciosList.layoutManager = LinearLayoutManager(requireContext())
 
-        // Configura el ViewModel
         val viewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
         ).get(EjerciciosListViewModel::class.java)
 
         val adapter = EjerciciosAdapter { ejercicio ->
-            // Configura la navegación a los fragmentos correspondientes
             when (ejercicio.nombre) {
                 "Curl de Bíceps" -> findNavController().navigate(R.id.action_brazosFragment_to_curlDeBicepsFragment)
                 "Tríceps en Polea" -> findNavController().navigate(R.id.action_brazosFragment_to_tricepsPoleaFragment)
@@ -59,19 +56,16 @@ class BrazosFragment : Fragment() {
         }
         ejerciciosList.adapter = adapter
 
-        // Observa los cambios en los ejercicios
         viewModel.ejercicios.observe(viewLifecycleOwner) { ejercicios ->
             if (!ejercicios.isNullOrEmpty()) {
                 adapter.submitList(ejercicios)
             }
         }
 
-        // Cargar los datos
         viewModel.load()
     }
 
 
-    // ViewModel para manejar los ejercicios
     class EjerciciosListViewModel(application: android.app.Application) : AndroidViewModel(application) {
         private val _ejercicios: MutableLiveData<List<Ejercicios>> = MutableLiveData()
         val ejercicios: LiveData<List<Ejercicios>> = _ejercicios
@@ -85,8 +79,15 @@ class BrazosFragment : Fragment() {
                 // Inserta ejercicios si no hay datos
                 if (ejercicios.isEmpty()) {
                     ejerciciosDao.insertarMuchos(
+                        Ejercicios(0, "Tríceps en Polea", """
+            El ejercicio de tríceps en polea es ideal para trabajar la parte posterior del brazo, ayudando a definir y fortalecer los tríceps.
+            Instrucciones:
+            1. Colócate de pie frente a una polea alta.
+            2. Sujeta la cuerda o barra con ambas manos, las palmas hacia abajo.
+            3. Mantén los codos pegados al cuerpo mientras empujas hacia abajo hasta estirar completamente los brazos.
+            4. Regresa lentamente a la posición inicial.
+            """, 1),
                         Ejercicios(0, "Curl de Bíceps", "Levanta las mancuernas en un movimiento controlado.", 1),
-                        Ejercicios(0, "Tríceps en Polea", "Empuja la polea hacia abajo hasta extender completamente los brazos.", 1),
                         Ejercicios(0, "Press Militar", "Levanta la barra por encima de tu cabeza con los codos extendidos.", 1),
                         Ejercicios(0, "Fondos en Paralelas", "Baja el cuerpo doblando los codos y sube extendiéndolos.", 1),
                         Ejercicios(0, "Curl Martillo", "Levanta las mancuernas con un agarre neutro.", 1),
@@ -102,7 +103,6 @@ class BrazosFragment : Fragment() {
         }
     }
 
-    // Adaptador para manejar los ejercicios
     class EjerciciosAdapter(
         private val onItemClick: (Ejercicios) -> Unit
     ) : ListAdapter<Ejercicios, EjerciciosAdapter.EjerciciosViewHolder>(EjerciciosComparator()) {

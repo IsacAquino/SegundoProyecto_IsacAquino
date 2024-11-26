@@ -29,95 +29,9 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Primera fila de botones -->
-    <TextView
-        android:id="@+id/btn_curl_biceps"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Curl de Bíceps"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        app:layout_constraintEnd_toStartOf="@+id/btn_triceps_polea" />
-
-    <TextView
-        android:id="@+id/btn_triceps_polea"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Tríceps en Polea"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/btn_curl_biceps"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
 
     <!-- Segunda fila de botones -->
-    <TextView
-        android:id="@+id/btn_press_militar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Press Militar"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_curl_biceps"
-        app:layout_constraintEnd_toStartOf="@+id/btn_fondos_paralelas" />
-
-    <TextView
-        android:id="@+id/btn_fondos_paralelas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Fondos en Paralelas"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/btn_press_militar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_triceps_polea" />
 
     <!-- Tercera fila de botones -->
-    <TextView
-        android:id="@+id/btn_curl_martillo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Curl Martillo"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_press_militar"
-        app:layout_constraintEnd_toStartOf="@+id/btn_press_mancuernas" />
 
-    <TextView
-        android:id="@+id/btn_press_mancuernas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Press con Mancuernas"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/btn_curl_martillo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_fondos_paralelas" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,6 @@ class InicioFragment : Fragment() {
         ).get(CategoriasListViewModel::class.java)
 
         val adapter = CategoriaListAdapter { categoria ->
-            // Navegación dinámica según la categoría seleccionada
             when (categoria.nombre) {
                 "Brazos" -> findNavController().navigate(R.id.action_inicioFragment_to_brazosFragment)
                 "Espalda" -> findNavController().navigate(R.id.action_inicioFragment_to_espaldaFragment)
@@ -57,22 +56,18 @@ class InicioFragment : Fragment() {
         }
         categoriasList.adapter = adapter
 
-        // Observa los cambios en las categorías
         viewModel.categorias.observe(viewLifecycleOwner) { categorias ->
             if (!categorias.isNullOrEmpty()) {
                 adapter.submitList(categorias)
             }
         }
 
-        // Cargar el nombre de la base de datos
         val dbName = DatabaseProvider.getInstance(requireContext()).openHelper.databaseName
         databaseTitle.text = dbName ?: "Nombre de la Base de Datos"
 
-        // Cargar los datos
         viewModel.load()
     }
 
-    // ViewModel que extiende AndroidViewModel para acceso al contexto global
     class CategoriasListViewModel(application: android.app.Application) : AndroidViewModel(application) {
         private val _categorias: MutableLiveData<List<Categorias>> = MutableLiveData()
         val categorias: LiveData<List<Categorias>> = _categorias
@@ -83,7 +78,6 @@ class InicioFragment : Fragment() {
                 val categoriasDaos = db.categoriasDaos()
                 var categorias = categoriasDaos.obtenerCategorias()
 
-                // Inserta datos si la base de datos está vacía
                 if (categorias.isEmpty()) {
                     categoriasDaos.insertarMuchos(
                         Categorias(id = 0, nombre = "Brazos"),
@@ -101,7 +95,6 @@ class InicioFragment : Fragment() {
         }
     }
 
-    // Adaptador con soporte para clics en cada categoría
     class CategoriaListAdapter(
         private val onItemClick: (Categorias) -> Unit
     ) : ListAdapter<Categorias, CategoriaListAdapter.WordViewHolder>(WordsComparator()) {
